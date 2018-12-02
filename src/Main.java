@@ -64,5 +64,10 @@ public class Main
             FullSlot fSlot = new FullSlot(tSlot.start, tSlot.end, fletcher, a14);
             schedule.add(fSlot);
         }
+
+        /*
+        Lunching the algorithm
+         */
+        Schedule plannedSchedule = schedule.planSchedule();
     }
 }
