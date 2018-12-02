@@ -1,6 +1,4 @@
-import fr.esgi.ai.models.Person;
-import fr.esgi.ai.models.Room;
-import fr.esgi.ai.models.TimeSlot;
+import fr.esgi.ai.models.*;
 
 import java.util.ArrayList;
 
@@ -49,5 +47,22 @@ public class Main
         a14Availabilities.add(a14Aprem);
 
         a14.addAll(a14Availabilities);
+
+        /*
+        Filling slots randomly to make a first schedule
+         */
+        Schedule schedule = new Schedule();
+
+        for (TimeSlot tSlot: allamAvailabilities)
+        {
+            FullSlot fSlot = new FullSlot(tSlot.start, tSlot.end, allam, a14);
+            schedule.add(fSlot);
+        }
+
+        for (TimeSlot tSlot: fletcherAvailabilities)
+        {
+            FullSlot fSlot = new FullSlot(tSlot.start, tSlot.end, fletcher, a14);
+            schedule.add(fSlot);
+        }
     }
 }
