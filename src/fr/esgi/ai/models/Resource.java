@@ -6,8 +6,13 @@ public abstract class Resource extends ArrayList<TimeSlot> {
 
     private String name;
 
-    public Resource(String name) {
+    public String getName()
+    {
+        return this.name;
+    }
 
+    public Resource(String name)
+    {
         this.name = name;
     }
 }

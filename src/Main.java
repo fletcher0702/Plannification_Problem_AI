@@ -39,8 +39,8 @@ public class Main
          */
         Room a14 = new Room("A14");
 
-        TimeSlot a14Matin = new TimeSlot(8,10);
-        TimeSlot a14Aprem = new TimeSlot(14,16);
+        TimeSlot a14Matin = new TimeSlot(8,12);
+        TimeSlot a14Aprem = new TimeSlot(14,17);
 
         ArrayList<TimeSlot> a14Availabilities = new ArrayList<>();
         a14Availabilities.add(a14Matin);
@@ -68,6 +68,6 @@ public class Main
         /*
         Lunching the algorithm
          */
-        Schedule plannedSchedule = schedule.planSchedule();
+        schedule.planSchedule();
     }
 }
