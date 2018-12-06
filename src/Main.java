@@ -25,8 +25,8 @@ public class Main
          */
         Person fletcher = new Person("Fletcher");
 
-        TimeSlot fletcherMatin = new TimeSlot(10,12);
-        TimeSlot fletcherAprem = new TimeSlot(16,17);
+        TimeSlot fletcherMatin = new TimeSlot(8,10);
+        TimeSlot fletcherAprem = new TimeSlot(14,16);
 
         ArrayList<TimeSlot> fletcherAvailabilities = new ArrayList<>();
         fletcherAvailabilities.add(fletcherMatin);
@@ -39,12 +39,16 @@ public class Main
          */
         Room a14 = new Room("A14");
 
-        TimeSlot a14Matin = new TimeSlot(8,12);
-        TimeSlot a14Aprem = new TimeSlot(14,17);
+        TimeSlot a14Matin1 = new TimeSlot(8,10);
+        TimeSlot a14Matin2 = new TimeSlot(10,12);
+        TimeSlot a14Aprem1 = new TimeSlot(14,16);
+        TimeSlot a14Aprem2 = new TimeSlot(16,17);
 
         ArrayList<TimeSlot> a14Availabilities = new ArrayList<>();
-        a14Availabilities.add(a14Matin);
-        a14Availabilities.add(a14Aprem);
+        a14Availabilities.add(a14Matin1);
+        a14Availabilities.add(a14Matin2);
+        a14Availabilities.add(a14Aprem1);
+        a14Availabilities.add(a14Aprem2);
 
         a14.addAll(a14Availabilities);
 
@@ -68,6 +72,8 @@ public class Main
         /*
         Lunching the algorithm
          */
+        schedule.initialize();
+        schedule.printSchedule();
         schedule.planSchedule();
     }
 }
